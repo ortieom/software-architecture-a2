@@ -7,7 +7,6 @@ Project structure:
 │   ├── client.py  # client code
 │   ├── docker-compose.yaml  # docker compose for launching server
 ├── tests/  # automated fitness functions
-│   ├── # TODO
 └── README.md
 ```
 

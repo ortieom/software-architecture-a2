@@ -3,7 +3,7 @@ from typing import List
 
 from fastapi import FastAPI
 
-from server.schemas import MsgRequest, Msg
+from .schemas import MsgRequest, Msg
 
 app = FastAPI()
 
