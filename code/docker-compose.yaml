@@ -1,0 +1,14 @@
+services:
+  server:
+    build:
+      context: ./server
+    command: "uvicorn server.server:app --host 0.0.0.0 --port 8000 --reload"
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./server:/app/server:ro
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: "curl -f http://localhost:8000/ping || kill 1"
+      start_period: 30s
